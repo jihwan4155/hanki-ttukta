@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="800" fill="#ffffff"/>
+  <text x="40" y="46" font-size="26" font-weight="700" fill="#0f172a">한끼뚝딱 시스템 아키텍처</text>
+  <text x="40" y="70" font-size="14" fill="#64748b">Vue 3 SPA  ⇄  Django REST API  ⇄  SQLite / 외부 API</text>
+
+  <!-- ===== Client ===== -->
+  <rect x="40" y="100" width="290" height="600" rx="14" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <text x="60" y="132" font-size="18" font-weight="700" fill="#0e7490">Client · Browser</text>
+  <text x="60" y="152" font-size="13" fill="#0e7490">Vue 3 · Vite · Vue Router · fetch</text>
+
+  <rect x="60" y="172" width="250" height="92" rx="10" fill="#fff" stroke="#67e8f9"/>
+  <text x="78" y="198" font-size="15" font-weight="700" fill="#0f172a">Views / Components</text>
+  <text x="78" y="220" font-size="12.5" fill="#475569">랜딩·홈 · 냉장고 · 레시피 추천</text>
+  <text x="78" y="238" font-size="12.5" fill="#475569">가격 비교 · 커뮤니티 · 마이페이지</text>
+
+  <rect x="60" y="282" width="250" height="78" rx="10" fill="#fff" stroke="#67e8f9"/>
+  <text x="78" y="308" font-size="15" font-weight="700" fill="#0f172a">Router + Navigation Guard</text>
+  <text x="78" y="330" font-size="12.5" fill="#475569">로그인 필요 페이지 보호 · redirect</text>
+
+  <rect x="60" y="378" width="250" height="96" rx="10" fill="#fff" stroke="#67e8f9"/>
+  <text x="78" y="404" font-size="15" font-weight="700" fill="#0f172a">Services Layer</text>
+  <text x="78" y="426" font-size="12.5" fill="#475569">apiClient (Token 헤더 자동 주입)</text>
+  <text x="78" y="444" font-size="12.5" fill="#475569">authStorage · socialAuth (OAuth 시작)</text>
+  <text x="78" y="462" font-size="12.5" fill="#475569">recipe / fridge / market / community API</text>
+
+  <rect x="60" y="492" width="250" height="78" rx="10" fill="#fff" stroke="#67e8f9"/>
+  <text x="78" y="518" font-size="15" font-weight="700" fill="#0f172a">Browser Storage</text>
+  <text x="78" y="540" font-size="12.5" fill="#475569">localStorage: 인증 토큰</text>
+  <text x="78" y="557" font-size="12.5" fill="#475569">sessionStorage: 글 임시저장(Draft)</text>
+
+  <rect x="60" y="588" width="250" height="92" rx="10" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="78" y="614" font-size="15" font-weight="700" fill="#0f172a">Kakao Maps JS SDK</text>
+  <text x="78" y="636" font-size="12.5" fill="#475569">마트 마커 · 최저가 오버레이</text>
+  <text x="78" y="654" font-size="12.5" fill="#475569">앱 키는 백엔드 응답으로 전달</text>
+
+  <!-- ===== Backend ===== -->
+  <rect x="440" y="100" width="420" height="600" rx="14" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="460" y="132" font-size="18" font-weight="700" fill="#047857">Backend · Django 5.2 + DRF</text>
+  <text x="460" y="152" font-size="13" fill="#047857">Token 인증 · dj-rest-auth · django-allauth</text>
+
+  <rect x="460" y="172" width="380" height="74" rx="10" fill="#fff" stroke="#6ee7b7"/>
+  <text x="478" y="198" font-size="15" font-weight="700" fill="#0f172a">API Layer  (/api/*, /accounts/*)</text>
+  <text x="478" y="220" font-size="12.5" fill="#475569">views · serializers · 공통 예외 핸들러 · 소셜 로그인 콜백</text>
+
+  <text x="478" y="272" font-size="13" font-weight="700" fill="#047857">Domain Services</text>
+
+  <rect x="460" y="282" width="184" height="76" rx="10" fill="#fff" stroke="#6ee7b7"/>
+  <text x="474" y="306" font-size="14" font-weight="700" fill="#0f172a">추천 엔진</text>
+  <text x="474" y="326" font-size="12" fill="#475569">커버리지·IDF·인기도</text>
+  <text x="474" y="343" font-size="12" fill="#475569">알레르기/식단 필터</text>
+
+  <rect x="656" y="282" width="184" height="76" rx="10" fill="#fff" stroke="#6ee7b7"/>
+  <text x="670" y="306" font-size="14" font-weight="700" fill="#0f172a">AI 레시피 생성</text>
+  <text x="670" y="326" font-size="12" fill="#475569">JSON 응답 · 결과 캐시</text>
+  <text x="670" y="343" font-size="12" fill="#475569">이미지 생성 · 식단 검수</text>
+
+  <rect x="460" y="372" width="184" height="76" rx="10" fill="#fff" stroke="#6ee7b7"/>
+  <text x="474" y="396" font-size="14" font-weight="700" fill="#0f172a">영수증 OCR 파이프라인</text>
+  <text x="474" y="416" font-size="12" fill="#475569">y좌표 줄 병합 → LLM 정제</text>
+  <text x="474" y="433" font-size="12" fill="#475569">→ 표준 식재료 매칭</text>
+
+  <rect x="656" y="372" width="184" height="76" rx="10" fill="#fff" stroke="#6ee7b7"/>
+  <text x="670" y="396" font-size="14" font-weight="700" fill="#0f172a">가격 비교</text>
+  <text x="670" y="416" font-size="12" fill="#475569">매장 카탈로그 캐시</text>
+  <text x="670" y="433" font-size="12" fill="#475569">좌표 이상치 정규화</text>
+
+  <rect x="460" y="462" width="380" height="60" rx="10" fill="#fff" stroke="#6ee7b7"/>
+  <text x="478" y="488" font-size="14" font-weight="700" fill="#0f172a">커뮤니티 · 사용자 · 냉장고 · 알림</text>
+  <text x="478" y="508" font-size="12" fill="#475569">게시글 자동 검수(규칙 + LLM) · 팔로우 · 소비기한 알림</text>
+
+  <!-- Data -->
+  <rect x="460" y="548" width="380" height="132" rx="10" fill="#f5f3ff" stroke="#8b5cf6"/>
+  <text x="478" y="574" font-size="15" font-weight="700" fill="#5b21b6">Data</text>
+  <text x="478" y="598" font-size="12.5" fill="#475569">• SQLite (Django ORM, 복합 인덱스)</text>
+  <text x="478" y="618" font-size="12.5" fill="#475569">• Fixtures 약 254만 건 (bulk_create 적재)</text>
+  <text x="478" y="638" font-size="12.5" fill="#475569">• market_catalog.json (전국 매장·상품 캐시)</text>
+  <text x="478" y="658" font-size="12.5" fill="#475569">• Django Cache (AI 레시피 · 가격 조회 TTL)</text>
+
+  <!-- ===== External ===== -->
+  <rect x="970" y="100" width="270" height="600" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="990" y="132" font-size="18" font-weight="700" fill="#334155">External APIs</text>
+  <text x="990" y="152" font-size="13" fill="#64748b">서버에서 호출 (키는 .env)</text>
+
+  <rect x="990" y="172" width="230" height="64" rx="10" fill="#fff" stroke="#cbd5e1"/>
+  <text x="1006" y="198" font-size="14" font-weight="700" fill="#0f172a">NAVER CLOVA OCR</text>
+  <text x="1006" y="218" font-size="12" fill="#475569">영수증 문자·좌표 인식</text>
+
+  <rect x="990" y="252" width="230" height="64" rx="10" fill="#fff" stroke="#cbd5e1"/>
+  <text x="1006" y="278" font-size="14" font-weight="700" fill="#0f172a">OpenAI · GPT</text>
+  <text x="1006" y="298" font-size="12" fill="#475569">영수증 정제 · 레시피 · 검수</text>
+
+  <rect x="990" y="332" width="230" height="64" rx="10" fill="#fff" stroke="#cbd5e1"/>
+  <text x="1006" y="358" font-size="14" font-weight="700" fill="#0f172a">OpenAI · gpt-image-1-mini</text>
+  <text x="1006" y="378" font-size="12" fill="#475569">레시피 완성 이미지 생성</text>
+
+  <rect x="990" y="412" width="230" height="64" rx="10" fill="#fff" stroke="#cbd5e1"/>
+  <text x="1006" y="438" font-size="14" font-weight="700" fill="#0f172a">한국소비자원 가격 OpenAPI</text>
+  <text x="1006" y="458" font-size="12" fill="#475569">생필품 판매가 · 점포 정보</text>
+
+  <rect x="990" y="492" width="230" height="78" rx="10" fill="#fff" stroke="#cbd5e1"/>
+  <text x="1006" y="518" font-size="14" font-weight="700" fill="#0f172a">Kakao · Naver · Google</text>
+  <text x="1006" y="538" font-size="12" fill="#475569">OAuth2 소셜 로그인</text>
+  <text x="1006" y="555" font-size="12" fill="#475569">(인가 코드 → 토큰 교환)</text>
+
+  <rect x="990" y="588" width="230" height="92" rx="10" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="1006" y="614" font-size="14" font-weight="700" fill="#0f172a">Kakao Maps</text>
+  <text x="1006" y="634" font-size="12" fill="#475569">브라우저에서 SDK 직접 로드</text>
+  <text x="1006" y="652" font-size="12" fill="#475569">(서버 호출 아님)</text>
+
+  <!-- ===== Arrows ===== -->
+  <!-- client <-> backend -->
+  <line x1="330" y1="209" x2="440" y2="209" stroke="#64748b" stroke-width="2.2" marker-end="url(#arr)" marker-start="url(#arr)"/>
+  <text x="335" y="196" font-size="11.5" fill="#475569">REST · JSON</text>
+  <text x="335" y="228" font-size="11.5" fill="#475569">Token Auth</text>
+
+  <!-- backend -> external -->
+  <line x1="860" y1="404" x2="970" y2="204" stroke="#64748b" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="860" y1="320" x2="970" y2="284" stroke="#64748b" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="860" y1="320" x2="970" y2="364" stroke="#64748b" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="860" y1="410" x2="970" y2="444" stroke="#64748b" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="860" y1="209" x2="970" y2="528" stroke="#64748b" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- client -> kakao maps external (browser direct) -->
+  <path d="M310 634 C 380 760, 900 760, 970 634" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="6,5" marker-end="url(#arrO)"/>
+  <text x="500" y="748" font-size="12" fill="#b45309">브라우저 → Kakao Maps (지도 타일·SDK)</text>
+
+  <!-- social OAuth browser redirect -->
+  <text x="40" y="784" font-size="12" fill="#64748b">※ 소셜 로그인: 브라우저가 각 제공자 인가 화면으로 이동 → 인가 코드를 서버로 전달 → 서버가 토큰 교환</text>
+</svg>
