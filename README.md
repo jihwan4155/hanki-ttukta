@@ -250,5 +250,3 @@ cd ../frontend
 npm install
 npm run dev                     # http://localhost:5173
 ```
-
-필요한 환경 변수는 [.env.example](.env.example) 참고. API 키가 없어도 서버는 뜨며, 해당 기능만 비활성화됩니다.
